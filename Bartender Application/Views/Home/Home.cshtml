@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>Wellcome to ClicktoDrink App</title>
+    <meta name="keywords" content="drinks, cocktail, bar" />
+    <link rel="stylesheet" href="~/css/Styles.css" />
+
+    <style>
+        body {
+            word-spacing: 0.1em;
+            background-color: #ffc;
+            margin: 40px;
+            padding: 0;
+        }
+
+        img {
+            border-style: dashed;
+            border-width: 2px;
+            border-color: #ccc;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <p><img src="~/images/01Cocktail.png" width="1000" height="250" alt="Cocktails" /> </p>
+        <br />
+        <h3>Please click on Menu to view our drinks or click on Order Now</h3>
+        <br />
+    </div>
+    <ul>
+        <li><h4><a class="" asp-action="Menu">Menu</a></h4></li>
+        <li><h4><a class="" asp-action="OrderNow">Order Now</a></h4></li>
+    </ul>
+   
+
+</body>
+</html>

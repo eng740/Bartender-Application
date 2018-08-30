@@ -1,0 +1,42 @@
+﻿@model BartenderApplication.Models.OrderNowData
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>Order Confirmation</title>
+    <meta name="keywords" content="drinks, cocktail, bar" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+
+    <style>
+        body {
+            word-spacing: 0.1em;
+            background-color: #ffc;
+            margin: 40px;
+            padding: 0;
+        }
+
+        img {
+            border-style: dashed;
+            border-width: 2px;
+            border-color: #ccc;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+        <p>
+            <h3 class="text-center">
+                Thank you for your order @Model.CustomerName!</h3>
+        </p>
+
+        <p>
+            <h3 class="text-center">Please wait while we are preparing your drink(s).</h3>
+        </p>
+
+    <p><h4>Go to <a class="" asp-action="Index">Home Page</a></h4></p>
+</body>
+</html>

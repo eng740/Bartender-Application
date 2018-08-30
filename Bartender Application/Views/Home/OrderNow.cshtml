@@ -1,0 +1,85 @@
+﻿@model BartenderApplication.Models.OrderNowData
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>Order Now</title>
+    <meta name="keywords" content="drinks, cocktail, bar" />
+    <link rel="stylesheet" href="~/css/Styles.css" />
+
+    <style>
+        body {
+            word-spacing: 0.1em;
+            background-color: #ffc;
+            margin: 40px;
+            padding: 0;
+        }
+        img {
+            border-style: dashed;
+            border-width: 2px;
+            border-color: #ccc;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h3>Wellcome to ClicktoDrink App</h3>
+        <p><img src="~/images/02Order.jpg" width="1000" height="250" alt="Cocktails" /> </p>
+        <br />
+        <p><h3>Please choose your drink(s) then click Order Now</h3></p>
+    </div>
+        
+
+    <form asp-action="OrderNow" method="post">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="CustomerName"> Your Name:</label>
+            <input asp-for="CustomerName" />
+        </p>
+
+        <p>
+            <label>Select your drink(s)</label>
+            <select asp-for="DrinkName">
+                <option value="">Choose a drink</option>
+                <option value="Pimms Cup">Pimms Cup</option>
+                <option value="Old Fashioned">Old Fashioned</option>
+                <option value="O‘Henry">O‘Henry</option>
+                <option value="Hemingway">Hemingway</option>
+                <option value="Bijou">Bijou</option>
+                <option value="Silver Laminable">Silver Laminable</option>
+                <option value="Southside">Southside</option>
+            </select>
+        </p>
+         
+        <p>
+            <label>How many drink(s)</label>
+            <select asp-for="DrinkQty">
+                <option value="">Choose how many</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Do you want to make it Double shot?</label>
+            <select asp-for="DoubleShot">
+                <option value="">Choose an option </option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </p>
+
+        <button type="submit">Order Now</button>
+        <button type="reset">Clear</button>
+    </form>
+    <p><h4>Go to <a class="" asp-action="Index">Home Page</a></h4></p>
+</body>
+</html>

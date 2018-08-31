@@ -8,7 +8,11 @@ namespace BartenderApplication.Models
 {
     public class OrderNowData
     {
-        //public int OrderNo { get; set; }
+        public int OrderNo
+        {
+            get;
+            set;
+        }
         [Required(ErrorMessage = "Please enter your name")]
         public string CustomerName { get; set; }
 

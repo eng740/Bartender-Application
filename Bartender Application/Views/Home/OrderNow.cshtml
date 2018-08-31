@@ -36,6 +36,8 @@
 
     <form asp-action="OrderNow" method="post">
         <div asp-validation-summary="All"></div>
+        <input asp-for="OrderNo" type ="hidden" value="1" />
+
         <p>
             <label asp-for="CustomerName"> Your Name:</label>
             <input asp-for="CustomerName" />
